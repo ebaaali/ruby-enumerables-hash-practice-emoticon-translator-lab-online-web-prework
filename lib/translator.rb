@@ -18,7 +18,7 @@ def get_japanese_emoticon(file, eng_emoji)
   entry.each do |meanings, emoji_hash|
     if entry[meanings][:japanese]
       jap_emoji = entry[meanings][:japanese]
-    else
+    if jap_emoji = nil
       jap_emoji = "Sorry, that emoticon was not found"
     end
   end
