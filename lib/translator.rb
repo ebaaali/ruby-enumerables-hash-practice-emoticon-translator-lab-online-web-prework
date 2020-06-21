@@ -19,10 +19,10 @@ def get_japanese_emoticon(file, eng_emoji)
     if entry[meanings][:japanese]
       jap_emoji = entry[meanings][:japanese]
     end
+    if !jap_emoji
+      jap_emoji = "Sorry"
+    end
   end
-  if jap_emoji = nil
-    return "Sorry"
-  else
   jap_emoji
 end 
   
