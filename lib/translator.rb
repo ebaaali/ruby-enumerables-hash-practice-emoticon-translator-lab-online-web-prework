@@ -20,7 +20,7 @@ def get_japanese_emoticon(file, eng_emoji)
       jap_emoji = entry[meanings][:japanese]
     end
     if jap_emoji = nil
-      jap_emoji = "Sorry, that emoticon was not found"
+      return "Sorry, that emoticon was not found"
     end
   end
   jap_emoji
