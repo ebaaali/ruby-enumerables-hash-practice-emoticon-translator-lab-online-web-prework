@@ -18,11 +18,8 @@ def get_japanese_emoticon(file, eng_emoji)
   entry.each do |meanings, emoji_hash|
     if entry[meanings][:japanese]
       jap_emoji = entry[meanings][:japanese]
-    end
-    if !jap_emoji
-      jap_emoji = "Sorry"
-    end
-  end
+    end 
+  end 
   jap_emoji
 end 
   
