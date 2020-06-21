@@ -16,7 +16,7 @@ def get_japanese_emoticon(file, eng_emoji)
   entry = dictionary.select {|meanings, emoji_hash| emoji_hash[:english] == eng_emoji}
   jap_emoji = nil
   entry.each do |meanings, emoji_hash|
-    if entry.keys[0]
+    if entry[meanings][:japanese]
       jap_emoji = entry[meanings][:japanese]
     else
       jap_emoji = "Sorry, that emoticon was not found"
